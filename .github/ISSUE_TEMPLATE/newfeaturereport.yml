@@ -1,0 +1,54 @@
+name: Feature Request
+description: File a feature request
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature request!
+  - type: input
+    id: contact-details
+    attributes:
+      label: Contact Details
+      description: What is your name?
+      placeholder: ex. Sofia Tawanontirama
+    validations:
+      required: true
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Type of request?
+      description: Select the type of your request
+      options:
+        - New Feature
+        - Improvement
+        - Other
+      default: 0 # Index of "New Feature" (the first option)
+    validations:
+      required: true
+  - type: dropdown
+    id: os-selection
+    attributes:
+      label: What is the OS which you want to suggest?
+      description: Select one
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+      default: 0 # Index of "Windows" (the first option)
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion-details
+    attributes:
+      label: What are the details of your suggestion?
+      description: Explain what do you want
+      placeholder: Feature details!
+    validations:
+      required: true
+ 
